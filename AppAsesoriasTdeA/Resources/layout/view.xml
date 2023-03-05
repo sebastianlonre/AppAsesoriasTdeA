@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:orientation="vertical"
+    >
+     <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#FF8F00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarMenu"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout1" 
+        />
+
+
+    <LinearLayout
+        android:background="#FFFCE7"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="360.5dp"
+        android:layout_height="261.5dp"
+        android:id="@+id/absoluteLayout1"
+        android:layout_marginLeft="12.5dp"
+        
+        android:orientation="vertical"
+        android:layout_marginTop="43.0dp">
+
+        <TextView
+            android:text="Asesoria sistemas operativos"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <TextView
+            android:text="Texto de asesoria"
+            android:layout_marginTop="50px"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center"
+            android:layout_width="299.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_marginTop="50px"
+            android:layout_height="74.5dp">
+
+            <Button
+                android:text="Postularce"
+                android:layout_width="140.5dp"
+                android:layout_height="49.5dp"
+                android:layout_marginTop="30px"
+                android:id="@+id/btnGo"
+                android:layout_marginLeft="34.0dp" />
+            <Button
+                android:text="Regresar"
+                android:layout_width="144.5dp"
+                android:layout_height="49.5dp"
+                android:layout_marginTop="30px"
+                android:id="@+id/btnBack"
+                android:layout_marginRight="0.0dp"
+                android:layout_marginLeft="12.5dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

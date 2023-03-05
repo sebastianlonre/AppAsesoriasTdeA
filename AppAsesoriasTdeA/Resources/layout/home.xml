@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFFF7"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#FF8F00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarMenu"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FEFFF7"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                
+                android:layout_marginTop="34.0dp"
+                android:text="Asesorías disponibles"
+                android:textSize="30sp"
+                android:typeface="sans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:id="@+id/elementTutor"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="40px"
+                android:background="#FFFCE7"
+                android:layout_width="330.5dp"
+                android:layout_height="140.5dp"
+                android:layout_marginLeft="2.0dp"
+                android:layout_marginRight="0.0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="0.0dp">
+                <TextView
+                    android:text="Asesoria A sistemas operativos"
+                    android:textSize="20sp"
+                    android:typeface="sans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_marginLeft="12.5dp" />
+                <Button
+                    android:layout_marginTop="40px"
+                    android:text="Ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnViewElement" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
