@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android ="http://schemas.android.com/apk/res/android">
 	<item
-	  android:id="@+id/icAdd"
-	  android:icon="@mipmap/ic_add"
-	  android:showAsAction="ifRoom"
-	  android:title="Close" />
+        android:id="@+id/icAdd"
+		android:icon="@mipmap/ic_add"
+		android:showAsAction="ifRoom"
+		android:title="Close">
+
+		<menu>
+			<group android:checkableBehavior="none">
+				<item
+                    android:id="@+id/menu_item_option1"
+                    android:title="Inicio" />
+				<item
+                    android:id="@+id/menu_item_option2"
+                    android:title="Ver usuarios" />
+				<item
+                    android:id="@+id/menu_item_option3"
+                    android:title="Cerrar sesion" />
+			</group>
+		</menu>
+	</item>
 </menu>

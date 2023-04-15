@@ -1,18 +1,15 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
+using AppAsesoriasTdeA.database;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace AppAsesoriasTdeA
 {
     [Activity(Label = "Register")]
-   public class register : Activity
+    public class register : Activity
     {
 
         EditText txtUserRegister;
@@ -38,15 +35,23 @@ namespace AppAsesoriasTdeA
             btnBackLogin.Click += btnBackLogin_Click;
         }
 
-        private void btnRegisterNew_Click(object sender, EventArgs e)
+        private async void btnRegisterNew_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (!string.IsNullOrEmpty(txtUserRegister.Text.Trim()) && !string.IsNullOrEmpty(txtUserEmail.Text.Trim()) && !string.IsNullOrEmpty(txtUserPassReg.Text.Trim()) && !string.IsNullOrEmpty(txtUserPassReConf.Text.Trim()))
                 {
+
+
                     if (txtUserPassReg.Text.Equals(txtUserPassReConf.Text))
                     {
+                        new CRUD().save(new insTable() { ID = 0, USERNAME = txtUserRegister.Text.Trim(), EMAIL = txtUserEmail.Text.Trim(), PASSWORD = txtUserPassReConf.Text.Trim() });
+
                         Toast.MakeText(this, "Registro realizado con éxito", ToastLength.Short).Show();
+
+                        await Task.Delay(20000);
+
                         Intent i = new Intent(this, typeof(MainActivity));
                         StartActivity(i);
                     }
@@ -62,9 +67,9 @@ namespace AppAsesoriasTdeA
 
 
             }
-            catch
+            catch (Exception ex)
             {
-
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
             }
         }
 

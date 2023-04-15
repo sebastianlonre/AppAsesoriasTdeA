@@ -1,9 +1,9 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using AppAsesoriasTdeA.database;
 
 namespace AppAsesoriasTdeA
 {
@@ -48,20 +48,31 @@ namespace AppAsesoriasTdeA
 
         private void btnLogin_Click(object sender, System.EventArgs e)
         {
+            insTable result = null;
             try
             {
                 if (!string.IsNullOrEmpty(txtUserLogin.Text.Trim()) && !string.IsNullOrEmpty(txtUserPassword.Text.Trim()))
                 {
-                    Toast.MakeText(this, "Login realizado con exito", ToastLength.Short).Show();
-                    Intent i = new Intent(this, typeof(home));
-                    StartActivity(i);
-                    Finish();
+                    result = new CRUD().SelectOne(txtUserLogin.Text.Trim(), txtUserPassword.Text.Trim());
+
+                    if (result != null)
+                    {
+                        Toast.MakeText(this, "Bienvenidooooooooo", ToastLength.Short).Show();
+                        Intent i = new Intent(this, typeof(home));
+                        StartActivity(i);
+                        Finish();
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Tal vez escribiste mal los datos o no existes aun :c", ToastLength.Short).Show();
+                    }
+
                 }
                 else
                 {
-                    Toast.MakeText(this, "Por favor ingrese un nombre de usuario y una clave", ToastLength.Long).Show();
+                    Toast.MakeText(this, "Llena todos los campos por fiiissss", ToastLength.Long).Show();
                 }
-                
+
             }
             catch
             {
@@ -69,7 +80,7 @@ namespace AppAsesoriasTdeA
             }
         }
 
-        private void btnForgetpassword_Click (object sender, System.EventArgs e)
+        private void btnForgetpassword_Click(object sender, System.EventArgs e)
         {
             try
             {

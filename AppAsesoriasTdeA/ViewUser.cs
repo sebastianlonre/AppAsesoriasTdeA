@@ -1,33 +1,46 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AppAsesoriasTdeA.database;
 using System;
-using Toolbar = Android.Widget.Toolbar;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace AppAsesoriasTdeA
 {
-    [Activity(Label = "home")]
-    public class home : Activity
+    [Activity(Label = "ViewUser")]
+    public class ViewUser : Activity
     {
-        Button btnViewElement;
         Toolbar toolbarmenu;
+        CRUD crud = new CRUD();
+        ListView listView;
+        List<insTable> userList;
+        ArrayAdapter<string> adapter;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.home);
-            btnViewElement = FindViewById<Button>(Resource.Id.btnViewElement);
+            SetContentView(Resource.Layout.ViewUser);
             toolbarmenu = FindViewById<Toolbar>(Resource.Id.toolbarMenu);
             SetActionBar(toolbarmenu);
             ActionBar.Title = "Asesorias";
-            btnViewElement.Click += btnViewElement_Click;
-        }
 
-        private void btnViewElement_Click(object sender, EventArgs e)
-        {
-            Intent i = new Intent(this, typeof(view));
-            StartActivity(i);
+            userList = crud.SelectAll().ToList();
+
+            List<string> userStrings = new List<string>();
+            foreach (var user in userList)
+            {
+                string userString = string.Format("Correo: {0}\nUsuario: {1}\nContraseña: {2}", user.EMAIL, user.USERNAME, user.PASSWORD);
+                userStrings.Add(userString);
+            }
+
+            listView = FindViewById<ListView>(Resource.Id.listView);
+            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, userStrings);
+            listView.Adapter = adapter;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

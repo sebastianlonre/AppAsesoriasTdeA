@@ -1,13 +1,8 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace AppAsesoriasTdeA
 {
@@ -71,7 +66,15 @@ namespace AppAsesoriasTdeA
         {
             switch (item.ItemId)
             {
-                case Resource.Id.icAdd:
+                case Resource.Id.menu_item_option1:
+                    Intent a = new Intent(this, typeof(home));
+                    StartActivity(a);
+                    break;
+                case Resource.Id.menu_item_option2:
+                    Intent b = new Intent(this, typeof(ViewUser));
+                    StartActivity(b);
+                    break;
+                case Resource.Id.menu_item_option3:
                     Intent i = new Intent(this, typeof(MainActivity));
                     StartActivity(i);
                     break;
