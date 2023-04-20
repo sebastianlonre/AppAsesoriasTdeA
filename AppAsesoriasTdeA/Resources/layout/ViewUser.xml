@@ -24,17 +24,18 @@
         android:gravity="center"
         android:id="@+id/linearLayout1">
         <TextView
-            android:text="Todos los usuarios"
+            android:text="Seleciona un usuario para modificar o eliminar"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:id="@+id/textView1" />
     </LinearLayout>
+
         <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
+        
 </LinearLayout>
 

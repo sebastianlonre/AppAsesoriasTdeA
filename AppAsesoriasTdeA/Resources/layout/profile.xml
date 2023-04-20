@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:orientation="vertical"
+    >
+     <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#FF8F00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarMenu"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1" 
+        android:gravity="center">>
+        
+        
+        <LinearLayout
+            android:background="#FFFCE7"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="360.5dp"
+            android:layout_height="448.5dp"
+            android:id="@+id/absoluteLayout2"
+            android:orientation="vertical"
+            android:layout_marginTop="43.0dp"
+            android:layout_marginBottom="21.5dp">
+
+            <TextView
+                android:text="Perfil"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginTop="19.0dp"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:text="Usuario"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/textView2"
+                android:layout_marginTop="18.0dp" />
+
+            <EditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:id="@+id/txtViewName"
+                android:layout_marginRight="30.0dp"
+                android:layout_marginLeft="30.0dp" />
+            <TextView
+                android:text="Contraseña"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/textView3"
+                android:layout_marginTop="18.0dp" />
+
+
+            <EditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:id="@+id/txtViewPassword"
+                android:layout_marginRight="30.0dp"
+                android:layout_marginLeft="30.0dp" />
+            <TextView
+                android:text="Correo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/textView4"
+                android:layout_marginTop="18.0dp" />
+
+            <EditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dp"
+                android:id="@+id/txtViewEmail"
+                android:layout_marginRight="30.0dp"
+                android:layout_marginLeft="30.0dp" />
+
+
+            <Button
+                android:text="Modificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnEdit"
+                android:layout_marginTop="23.0dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30.0dp" />
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

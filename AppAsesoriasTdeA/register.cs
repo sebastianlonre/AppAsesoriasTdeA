@@ -50,8 +50,6 @@ namespace AppAsesoriasTdeA
 
                         Toast.MakeText(this, "Registro realizado con éxito", ToastLength.Short).Show();
 
-                        await Task.Delay(20000);
-
                         Intent i = new Intent(this, typeof(MainActivity));
                         StartActivity(i);
                     }

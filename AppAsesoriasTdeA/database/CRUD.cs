@@ -63,11 +63,49 @@ namespace AppAsesoriasTdeA.database
             }
         }
 
+        public insTable SelectOneById(int j)
+        {
+            lock (locker)
+            {
+                return conect.Table<insTable>().FirstOrDefault(x => x.ID == j);
+            }
+        }
+
         public IEnumerable<insTable> SelectAll()
         {
             lock (locker)
             {
                 return (from i in conect.Table<insTable>() select i).ToList();
+            }
+        }
+
+        public int Update(insTable register)
+        {
+            lock (locker)
+            {
+                if (register.ID != 0)
+                {
+                    return conect.Update(register);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        public int Delete(insTable register)
+        {
+            lock (locker)
+            {
+                if (register.ID != 0)
+                {
+                    return conect.Delete(register);
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
 

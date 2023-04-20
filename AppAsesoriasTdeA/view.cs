@@ -75,6 +75,10 @@ namespace AppAsesoriasTdeA
                     StartActivity(b);
                     break;
                 case Resource.Id.menu_item_option3:
+                    Intent c = new Intent(this, typeof(Profile));
+                    StartActivity(c);
+                    break;
+                case Resource.Id.menu_item_option4:
                     Intent i = new Intent(this, typeof(MainActivity));
                     StartActivity(i);
                     break;

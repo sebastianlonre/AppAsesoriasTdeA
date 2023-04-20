@@ -15,6 +15,8 @@ namespace AppAsesoriasTdeA
         Button btnLogin;
         Button btnRegister;
         Button btnForgetpassword;
+        public static int Globalid { get; set; }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,7 +38,7 @@ namespace AppAsesoriasTdeA
         {
             try
             {
-                Intent i = new Intent(this, typeof(register));
+                Intent i = new Intent(this, typeof(register)); 
                 StartActivity(i);
             }
             catch
@@ -59,6 +61,7 @@ namespace AppAsesoriasTdeA
                     {
                         Toast.MakeText(this, "Bienvenidooooooooo", ToastLength.Short).Show();
                         Intent i = new Intent(this, typeof(home));
+                        Globalid = result.ID;
                         StartActivity(i);
                         Finish();
                     }

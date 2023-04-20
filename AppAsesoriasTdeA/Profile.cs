@@ -3,31 +3,57 @@ using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using System;
-using Toolbar = Android.Widget.Toolbar;
+using AppAsesoriasTdeA.database;
 
 namespace AppAsesoriasTdeA
 {
-    [Activity(Label = "home")]
-    public class home : Activity
+    [Activity(Label = "profile")]
+    public class Profile : Activity
     {
-        Button btnViewElement;
+        Button btnEdit;
+        EditText txtViewName;
+        EditText txtViewPassword;
+        EditText txtViewEmail;
         Toolbar toolbarmenu;
+        CRUD crud = new CRUD();
+        private insTable userConsult;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.home);
-            btnViewElement = FindViewById<Button>(Resource.Id.btnViewElement);
+            SetContentView(Resource.Layout.profile);
+
+            btnEdit = FindViewById<Button>(Resource.Id.btnEdit);
             toolbarmenu = FindViewById<Toolbar>(Resource.Id.toolbarMenu);
+            txtViewName = FindViewById<EditText>(Resource.Id.txtViewName);
+            txtViewPassword = FindViewById<EditText>(Resource.Id.txtViewPassword);
+            txtViewEmail = FindViewById<EditText>(Resource.Id.txtViewEmail);
             SetActionBar(toolbarmenu);
             ActionBar.Title = "Asesorias";
-            btnViewElement.Click += btnViewElement_Click;
+            btnEdit.Click += btnEdit_Click;
+
+            //traer datos de la bd
+
+            userConsult = crud.SelectOneById(MainActivity.Globalid);
+            txtViewName.Text = userConsult.USERNAME;
+            txtViewEmail.Text = userConsult.EMAIL;
+            txtViewPassword.Text= userConsult.PASSWORD;
         }
 
-        private void btnViewElement_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, System.EventArgs e)
         {
-            Intent i = new Intent(this, typeof(view));
-            StartActivity(i);
+
+            try
+            {
+                crud.Update(new insTable() { ID = MainActivity.Globalid, USERNAME = txtViewName.Text.Trim(), EMAIL = txtViewEmail.Text.Trim(), PASSWORD = txtViewPassword.Text.Trim() });
+                Intent b = new Intent(this, typeof(Profile));
+                Toast.MakeText(this, "Registro modificado con exito ", ToastLength.Short).Show();
+                StartActivity(b);
+            }
+            catch
+            {
+
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

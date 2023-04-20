@@ -16,6 +16,9 @@
                     android:title="Ver usuarios" />
 				<item
                     android:id="@+id/menu_item_option3"
+                    android:title="Perfil" />
+				<item
+                    android:id="@+id/menu_item_option4"
                     android:title="Cerrar sesion" />
 			</group>
 		</menu>
