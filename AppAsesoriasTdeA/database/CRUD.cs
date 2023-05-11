@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,7 @@ namespace AppAsesoriasTdeA.database
         {
             conect = cone();
             conect.CreateTable<insTable>();
+            conect.CreateTable<Tutor>();
         }
 
 
@@ -40,6 +42,8 @@ namespace AppAsesoriasTdeA.database
 
         }
 
+
+        //Crud tabla de usuarios
         public int save(insTable register)
         {
             lock (locker)
@@ -108,6 +112,71 @@ namespace AppAsesoriasTdeA.database
                 }
             }
         }
+
+        //CRUD tabla de tutorias
+
+        public int saveTutor(Tutor register)
+        {
+            lock (locker)
+            {
+                if (register.IDTutor == 0)
+                {
+                    return conect.Insert(register);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        public Tutor SelectOneTutor(int j)
+        {
+            lock (locker)
+            {
+                return conect.Table<Tutor>().FirstOrDefault(x => x.IDTutor == j);
+            }
+        }
+
+        public IEnumerable<Tutor> SelectTutor()
+        {
+            lock (locker)
+            {
+                return (from i in conect.Table<Tutor>() select i).ToList();
+            }
+        }
+
+        public int UpdateTutor(Tutor register)
+        {
+            lock (locker)
+            {
+                if (register.IDTutor != 0)
+                {
+                    return conect.Update(register);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        public int DeleteTutor(Tutor register)
+        {
+            lock (locker)
+            {
+                if (register.IDTutor != 0)
+                {
+                    return conect.Delete(register);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+
 
     }
 }
