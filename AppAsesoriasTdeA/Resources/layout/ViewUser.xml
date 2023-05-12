@@ -32,10 +32,23 @@
             android:id="@+id/textView1" />
     </LinearLayout>
 
-        <ListView
+    <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="182.0dp" />
+    <TextView
+            android:text="Seleciona una clase para modificar o eliminar"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textView1" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="182.0dp"
+        android:layout_marginTop="26.0dp" />
         
 </LinearLayout>
 

@@ -6,54 +6,35 @@ using Android.Widget;
 
 namespace AppAsesoriasTdeA
 {
-    [Activity(Label = "view")]
-    public class view : Activity
+    [Activity(Label = "Itutor")]
+    public class Itutor : Activity
     {
-        Button btnGo;
-        Button btnBack;
+        Button btnGoo;
+        EditText txtMyClass;
+        EditText txtMyRazon;
+        EditText txtClock;
         Toolbar toolbarmenu;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.view);
-            btnGo = FindViewById<Button>(Resource.Id.btnGo);
-            btnBack = FindViewById<Button>(Resource.Id.btnBack);
+            SetContentView(Resource.Layout.Itutor);
+            btnGoo = FindViewById<Button>(Resource.Id.btnGoo);
             toolbarmenu = FindViewById<Toolbar>(Resource.Id.toolbarMenu);
+            txtMyClass = FindViewById<EditText>(Resource.Id.txtMyClass);
+            txtMyRazon = FindViewById<EditText>(Resource.Id.txtMyRazon);
+            txtClock = FindViewById<EditText>(Resource.Id.txtClock);
             SetActionBar(toolbarmenu);
             ActionBar.Title = "Asesorias";
-
-            btnGo.Click += btnGo_click;
-            btnBack.Click += btnBack_Click;
+            btnGoo.Click += btnGoo_Click;
 
         }
 
-        private void btnGo_click(object sender, System.EventArgs e)
+        private void btnGoo_Click(object sender, System.EventArgs e)
         {
-            try
-            {
-                Toast.MakeText(this, "En proximas actualizaciones", ToastLength.Long).Show();
-                Intent i = new Intent(this, typeof(home));
-                StartActivity(i);
-            }
-            catch
-            {
-
-            }
-
-        }
-
-        private void btnBack_Click(object sender, System.EventArgs e)
-        {
-            try
-            {
-                Intent i = new Intent(this, typeof(home));
-                StartActivity(i);
-            }
-            catch
-            {
-
-            }
-
+            Toast.MakeText(this, "Gracias por querer ser tutor, en los proximos diás nos contactaremos contigo", ToastLength.Short).Show();
+            Intent i = new Intent(this, typeof(home));
+            StartActivity(i);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

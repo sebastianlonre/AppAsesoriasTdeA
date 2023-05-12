@@ -65,6 +65,8 @@
     <Compile Include="database\CRUD.cs" />
     <Compile Include="database\insTable.cs" />
     <Compile Include="database\Tutor.cs" />
+    <Compile Include="Itutor.cs" />
+    <Compile Include="newRoom.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="RecoveryPassword.cs" />
     <Compile Include="Forgetpassword.cs" />
@@ -210,6 +212,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Update.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Itutor.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\newRoom.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\element.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

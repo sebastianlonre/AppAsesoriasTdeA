@@ -24,19 +24,20 @@
         
         
         
+        
         <LinearLayout
             android:background="#FFFCE7"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="360.5dp"
-            android:layout_height="517.5dp"
+            android:layout_height="449.5dp"
             android:id="@+id/absoluteLayout2"
             android:orientation="vertical"
             android:layout_marginTop="43.0dp"
             android:layout_marginBottom="21.5dp">
 
             <TextView
-                android:text="Perfil"
+                android:text="Nueva tutoria"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="match_parent"
                 android:gravity="center"
@@ -46,7 +47,7 @@
                 android:textSize="25sp"/>
 
             <TextView
-                android:text="Usuario"
+                android:text="Nombre de la clase"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,11 +59,11 @@
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dp"
-                android:id="@+id/txtViewName"
+                android:id="@+id/txtnewRoom"
                 android:layout_marginRight="30.0dp"
                 android:layout_marginLeft="30.0dp" />
             <TextView
-                android:text="Contraseña"
+                android:text="Descripción"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,11 +76,11 @@
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dp"
-                android:id="@+id/txtViewPassword"
+                android:id="@+id/txtDescriptionRoom"
                 android:layout_marginRight="30.0dp"
                 android:layout_marginLeft="30.0dp" />
             <TextView
-                android:text="Correo"
+                android:text="Horarios"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,29 +92,19 @@
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dp"
-                android:id="@+id/txtViewEmail"
+                android:id="@+id/txtRoomClock"
                 android:layout_marginRight="30.0dp"
                 android:layout_marginLeft="30.0dp" />
 
 
             <Button
-                android:text="Modificar"
+                android:text="Nueva tutoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnEdit"
+                android:id="@+id/btnBestRoom"
                 android:layout_marginTop="23.0dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30.0dp" />
-
-            <Button
-                android:text="Quiero ser tutor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnImTutor"
-                android:layout_marginTop="23.0dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30.0dp" />
-
 
         </LinearLayout>
         

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#FFFCE7"
+    android:layout_width="330.5dp"
+    android:layout_height="350.5dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+   xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <TextView
+        android:text="nombre tutoria"
+        android:id="@+id/textTittle"
+        android:textSize="20sp"
+        android:typeface="sans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.0dp"
+        android:gravity="center"
+        android:layout_marginTop="28.0dp" />
+    <TextView
+        android:text="Descripcion"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="53.5dp"
+        android:id="@+id/textDescrip"
+        android:layout_marginTop="16.0dp" />
+    <TextView
+        android:text="Horario"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock" />
+
+
+    <Button
+        android:id="@+id/btnViewElement"
+        android:text="Ver"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dp"
+        android:layout_marginTop="40px" />
+</LinearLayout>

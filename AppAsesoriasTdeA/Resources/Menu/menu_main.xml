@@ -19,6 +19,9 @@
                     android:title="Perfil" />
 				<item
                     android:id="@+id/menu_item_option4"
+                    android:title="Crear clase" />
+				<item
+                    android:id="@+id/menu_item_option5"
                     android:title="Cerrar sesion" />
 			</group>
 		</menu>

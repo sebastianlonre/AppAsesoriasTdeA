@@ -14,9 +14,11 @@ namespace AppAsesoriasTdeA.database
         [PrimaryKey, AutoIncrement]
 
         public int IDTutor { get; set; }
-        public string TitleTutor { get; set; }
+        public string className { get; set; }
 
-        public string TextTutor { get; set; }
+        public string classDescription { get; set; }
+
+        public string classClock { get; set; }
 
         public int InsTableId { get; set; }
     }

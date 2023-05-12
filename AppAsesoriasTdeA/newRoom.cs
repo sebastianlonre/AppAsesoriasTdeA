@@ -3,56 +3,64 @@ using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using AppAsesoriasTdeA.database;
+using System;
 
 namespace AppAsesoriasTdeA
 {
-    [Activity(Label = "view")]
-    public class view : Activity
+    [Activity(Label = "newRoom")]
+    public class newRoom : Activity
     {
-        Button btnGo;
-        Button btnBack;
+        Button btnBestRoom;
+        EditText txtnewRoom;
+        EditText txtDescriptionRoom;
+        EditText txtRoomClock;
         Toolbar toolbarmenu;
+        CRUD crud = new CRUD();
+        private Tutor newClase;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.view);
-            btnGo = FindViewById<Button>(Resource.Id.btnGo);
-            btnBack = FindViewById<Button>(Resource.Id.btnBack);
+            SetContentView(Resource.Layout.newRoom);
+
+            btnBestRoom = FindViewById<Button>(Resource.Id.btnBestRoom);
             toolbarmenu = FindViewById<Toolbar>(Resource.Id.toolbarMenu);
+            txtnewRoom = FindViewById<EditText>(Resource.Id.txtnewRoom);
+            txtDescriptionRoom = FindViewById<EditText>(Resource.Id.txtDescriptionRoom);
+            txtRoomClock = FindViewById<EditText>(Resource.Id.txtRoomClock);
             SetActionBar(toolbarmenu);
             ActionBar.Title = "Asesorias";
 
-            btnGo.Click += btnGo_click;
-            btnBack.Click += btnBack_Click;
-
+            btnBestRoom.Click += btnBestRoom_Click;
         }
 
-        private void btnGo_click(object sender, System.EventArgs e)
+        private void btnBestRoom_Click(object sender, System.EventArgs e)
         {
             try
             {
-                Toast.MakeText(this, "En proximas actualizaciones", ToastLength.Long).Show();
-                Intent i = new Intent(this, typeof(home));
-                StartActivity(i);
+                if (!string.IsNullOrEmpty(txtnewRoom.Text.Trim()) && !string.IsNullOrEmpty(txtDescriptionRoom.Text.Trim()) && !string.IsNullOrEmpty(txtRoomClock.Text.Trim()))
+                {
+
+                    new CRUD().saveTutor(new Tutor() { IDTutor = 0, className = txtnewRoom.Text.Trim(), classDescription = txtDescriptionRoom.Text.Trim(), classClock = txtRoomClock.Text.Trim() , InsTableId = MainActivity.Globalid });
+
+                    Toast.MakeText(this, "Clase creada con exito, cuando sea verificada nos comunicaremos", ToastLength.Short).Show();
+
+                    Intent i = new Intent(this, typeof(Profile));
+                    StartActivity(i);
+                }
+                else
+                {
+                    Toast.MakeText(this, "Rellene todos los campos", ToastLength.Long).Show();
+                }
+
+
             }
-            catch
+            catch (Exception ex)
             {
-
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
             }
 
-        }
-
-        private void btnBack_Click(object sender, System.EventArgs e)
-        {
-            try
-            {
-                Intent i = new Intent(this, typeof(home));
-                StartActivity(i);
-            }
-            catch
-            {
-
-            }
 
         }
 

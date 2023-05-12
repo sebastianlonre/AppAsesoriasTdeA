@@ -11,6 +11,7 @@ namespace AppAsesoriasTdeA
     public class Profile : Activity
     {
         Button btnEdit;
+        Button btnImTutor;
         EditText txtViewName;
         EditText txtViewPassword;
         EditText txtViewEmail;
@@ -24,13 +25,16 @@ namespace AppAsesoriasTdeA
             SetContentView(Resource.Layout.profile);
 
             btnEdit = FindViewById<Button>(Resource.Id.btnEdit);
+            btnImTutor = FindViewById<Button>(Resource.Id.btnImTutor);
             toolbarmenu = FindViewById<Toolbar>(Resource.Id.toolbarMenu);
             txtViewName = FindViewById<EditText>(Resource.Id.txtViewName);
             txtViewPassword = FindViewById<EditText>(Resource.Id.txtViewPassword);
             txtViewEmail = FindViewById<EditText>(Resource.Id.txtViewEmail);
             SetActionBar(toolbarmenu);
             ActionBar.Title = "Asesorias";
+
             btnEdit.Click += btnEdit_Click;
+            btnImTutor.Click += btnImTutor_Click;
 
             //traer datos de la bd
 
@@ -56,6 +60,12 @@ namespace AppAsesoriasTdeA
             }
         }
 
+        private void btnImTutor_Click(object sender, System.EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(Itutor));
+            StartActivity(i);
+        }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
@@ -79,6 +89,10 @@ namespace AppAsesoriasTdeA
                     StartActivity(c);
                     break;
                 case Resource.Id.menu_item_option4:
+                    Intent d = new Intent(this, typeof(newRoom));
+                    StartActivity(d);
+                    break;
+                case Resource.Id.menu_item_option5:
                     Intent i = new Intent(this, typeof(MainActivity));
                     StartActivity(i);
                     break;
